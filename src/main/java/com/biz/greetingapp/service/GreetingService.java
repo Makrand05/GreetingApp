@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class GreetingService implements IGreetingService {
     private static final String template="Hello, %s";
-    private final AtomicLong counter = new Atomiadd .cLong();
+    private final AtomicLong counter = new AtomicLong();
 
     @Autowired
     private GreetingRepository greetingRepository;
