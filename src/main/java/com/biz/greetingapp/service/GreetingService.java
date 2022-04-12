@@ -40,4 +40,10 @@ public class GreetingService implements IGreetingService {
 
         return greetingRepository.save(new Greeting(counter.incrementAndGet(),message));
     }
+
+    @Override
+    public void deleteGreeting(long id) {
+        greetingRepository.deleteById(id);
+
+    }
 }
