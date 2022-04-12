@@ -6,6 +6,7 @@ import com.biz.greetingapp.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
@@ -31,18 +32,8 @@ public class GreetingController {
         return iGreetingService.getGreeting(id);
     }
 
-//    @GetMapping(value = {"/","/user"})
-//    public Greeting greetingUser(@RequestParam(value="firstName") String firstName,
-//                                 @RequestParam(value="lastName") String lastName) {
-//       // return new Greeting(counter.incrementAndGet(),String.format(template, (firstName+" "+lastName)));
-//
-//
-//    }
-
-//    @PutMapping("/{firstName}")
-//    public Greeting greeting(@PathVariable String firstName,
-//                             @RequestParam(value = "lastName") String lastName) {
-//        return new Greeting(counter.incrementAndGet(),
-//                String.format(template, (firstName+" "+lastName)));
-//    }
+    @PostMapping("/allGreeting")
+    public List<Greeting> getAllGreeting(){
+        return iGreetingService.getallGreeting();
+    }
 }
