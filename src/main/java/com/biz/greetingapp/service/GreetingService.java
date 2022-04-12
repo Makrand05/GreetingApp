@@ -33,4 +33,11 @@ public class GreetingService implements IGreetingService {
     public List<Greeting> getallGreeting() {
         return greetingRepository.findAll();
     }
+
+    @Override
+    public Greeting editGreeting(int id) {
+        String message=String.format(template,("Ram"));
+
+        return greetingRepository.save(new Greeting(counter.incrementAndGet(),message));
+    }
 }

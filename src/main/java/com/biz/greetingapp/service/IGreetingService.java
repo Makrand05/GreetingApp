@@ -10,4 +10,6 @@ public interface IGreetingService {
     Greeting getGreeting(long id);
 
     List<Greeting> getallGreeting();
+
+    Greeting editGreeting(int id);
 }

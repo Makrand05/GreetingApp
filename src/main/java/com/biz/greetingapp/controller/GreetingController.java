@@ -36,4 +36,11 @@ public class GreetingController {
     public List<Greeting> getAllGreeting(){
         return iGreetingService.getallGreeting();
     }
+
+    @PostMapping("/editGreeting")
+    public Greeting editGreeting(@RequestParam int id){
+        return iGreetingService.editGreeting(id);
+    }
+
+
 }
